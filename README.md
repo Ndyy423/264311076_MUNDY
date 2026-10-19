@@ -115,8 +115,11 @@ ORDER BY
 
 ## Bukti Eksekusi Query
 
-| Nomor Soal | Deskripsi Tugas | Bukti Eksekusi (Screenshot) |
-| :--- | :--- | :--- |
-| **Soal 1** | Data Definition & Relasi (DDL) | [![Bukti Soal 1](./assets/soal1.png)](./assets/soal1.png) |
-| **Soal 2** | Operasi CRUD Dasar (DML) | [![Bukti Soal 2](./assets/soal2.png)](./assets/soal2.png) |
-| **Soal 3** | Query Kompleks & Agregasi | [![Bukti Soal 3](./assets/soal3.png)](./assets/soal3.png) |
+### Soal 1
+![Bukti Eksekusi Soal 1](./assets/soal1.png)
+
+### Soal 2
+![Bukti Eksekusi Soal 2](./assets/soal2.png)
+
+### Soal 3
+![Bukti Eksekusi Soal 3](./assets/soal3.png)
