@@ -1,14 +1,58 @@
-===================================================================
--- LAPORAN TUGAS PRAKTIKUM DATABASE
--- Nama  : MUHAMMAD ANDY DWI SUBANDI
--- NIM   : 264311076
--- Kelas : 1C
-===================================================================
+Laporan Tugas Praktikum Basis Data - Poltek / Universitas
 
--- ================================================================
--- SOAL 1: DATA DEFINITION & RELASI (DDL)
--- ================================================================
+## 👤 Identitas Mahasiswa
 
+| Keterangan | Detail | 
+| ----- | ----- | 
+| **Nama** | **MUHAMMAD ANDY DWI SUBANDI** | 
+| **NIM** | `264311076` | 
+| **Kelas** | `1C` | 
+| **Mata Kuliah** | Praktikmm Sistem Basis Data | 
+
+## 📑 Deskripsi Sistem
+
+Sistem Basis Data ini dirancang untuk mencatat dan mengelola data **Pelanggaran Lalu Lintas (Tilang)**. Sistem terdiri dari dua tabel induk (master data) dan satu tabel transaksi:
+
+1. **`petugas`** *(Tabel Induk)*: Menyimpan data personel kepolisian yang mencatat pelanggaran.
+
+2. **`kendaraan`** *(Tabel Induk)*: Menyimpan data kendaraan terdaftar beserta pemiliknya.
+
+3. **`pelanggaran`** *(Tabel Transaksi)*: Mencatat transaksi tilang yang menghubungkan petugas dan kendaraan terkait.
+
+## 📊 Entity Relationship Diagram (ERD)
+
+```
+erDiagram
+    PETUGAS ||--o{ PELANGGARAN : "menangani"
+    KENDARAAN ||--o{ PELANGGARAN : "terlibat"
+
+    PETUGAS {
+        string nrp PK
+        string nama_petugas
+        string pangkat
+    }
+
+    KENDARAAN {
+        string nomor_polisi PK
+        string jenis_kendaraan
+        string merk
+        string nama_pemilik
+        string alamat_pemilik
+    }
+
+    PELANGGARAN {
+        string no_tilang PK
+        string no_referensi
+        date tanggal
+        string nrp_petugas FK
+        string nomor_polisi FK
+    }
+
+```
+
+## 💻 Skema dan Query SQL
+
+```
 -- 1. TABEL INDUK: petugas
 CREATE TABLE petugas (
     nrp          VARCHAR(20)  NOT NULL,
@@ -44,12 +88,10 @@ CREATE TABLE pelanggaran (
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
+```
 
--- ================================================================
--- SOAL 2: OPERASI CRUD DASAR (DML)
--- ================================================================
-
--- 1. [CREATE] Insert data ke seluruh tabel
+```
+-- 1. [CREATE] Insert Data
 INSERT INTO petugas (nrp, nama_petugas, pangkat) VALUES
     ('81020145', 'Budi Santoso',   'Aipda'),
     ('83050231', 'Rina Wulandari', 'Bripka'),
@@ -65,7 +107,7 @@ INSERT INTO pelanggaran (no_tilang, no_referensi, tanggal, nrp_petugas, nomor_po
     ('PLS-2026-002', 'REF-A002', '2026-10-03', '83050231', 'AE 5678 CD'),
     ('PLS-2026-003', 'REF-A003', '2026-10-05', '85070312', 'N 9012 EF');
 
--- 2. [READ] Tampilkan seluruh isi tabel kendaraan
+-- 2. [READ] Tampilkan Seluruh Isi Tabel Induk Kendaraan
 SELECT 
     nomor_polisi,
     jenis_kendaraan,
@@ -74,7 +116,7 @@ SELECT
     alamat_pemilik
 FROM kendaraan;
 
--- 3. [UPDATE] Ubah tanggal transaksi tilang 'PLS-2026-001'
+-- 3. [UPDATE] Ubah Tanggal Transaksi Tilang
 UPDATE pelanggaran
 SET tanggal = '2026-10-02'
 WHERE no_tilang = 'PLS-2026-001';
@@ -82,19 +124,17 @@ WHERE no_tilang = 'PLS-2026-001';
 -- Cek hasil update
 SELECT * FROM pelanggaran WHERE no_tilang = 'PLS-2026-001';
 
--- 4. [DELETE] Hapus baris transaksi tilang 'PLS-2026-003'
+-- 4. [DELETE] Hapus Satu Baris Transaksi Tilang
 DELETE FROM pelanggaran
 WHERE no_tilang = 'PLS-2026-003';
 
 -- Cek hasil delete
 SELECT * FROM pelanggaran;
 
+```
 
--- ================================================================
--- SOAL 3: QUERY KOMPLEKS & AGREGASI LAPORAN
--- ================================================================
-
--- Laporan rekapitulasi jumlah pelanggaran yang ditangani tiap petugas (Oktober 2026)
+```
+-- Laporan rekapitulasi jumlah pelanggaran yang ditangani tiap petugas (Periode Oktober 2026)
 SELECT 
     p.nrp,
     p.nama_petugas,
@@ -110,3 +150,21 @@ GROUP BY
     p.pangkat
 ORDER BY 
     total_pelanggaran DESC;
+
+```
+
+## 🛠️ Cara Menjalankan Script
+
+1. Pastikan RDBMS (MySQL / MariaDB / PostgreSQL) sudah terinstall dan aktif.
+
+2. Buka database client pilihan Anda (misal: **phpMyAdmin**, **MySQL Workbench**, **DBeaver**, atau via CLI).
+
+3. Buat database baru:
+
+   ```
+   CREATE DATABASE db_pelanggaran;
+   USE db_pelanggaran;
+   
+   ```
+
+4. Eksekusi query sesuai urutan file `script.sql` (mulai dari DDL Soal 1, DML Soal 2, hingga Soal 3).
