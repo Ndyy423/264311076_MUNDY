@@ -126,6 +126,7 @@ ORDER BY
 
 ### Soal 1
 ![Bukti Eksekusi Soal 1](./assets/bukti_soal_1.png)
+![Bukti Eksekusi Soal 1](./assets/bukti_soal_1_1.png)
 
 ### Soal 2
 ![Bukti Eksekusi Soal 2](./assets/bukti_soal_2.png)
