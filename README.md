@@ -1,14 +1,17 @@
-===================================================================
--- LAPORAN TUGAS PRAKTIKUM DATABASE
--- Nama  : MUHAMMAD ANDY DWI SUBANDI
--- NIM   : 264311076
--- Kelas : 1C
-===================================================================
+# Laporan Praktikum Sistem Basis Data
 
--- ================================================================
--- SOAL 1: DATA DEFINITION & RELASI (DDL)
--- ================================================================
+| Info | Keterangan |
+| :--- | :--- |
+| **Nama** | MUHAMMAD ANDY DWI SUBANDI |
+| **NIM** | `264311076` |
+| **Kelas** | 1C |
+| **Mata Kuliah** | Praktikum Sistem Basis Data |
 
+---
+
+## Soal 1: Data Definition Language (DDL)
+
+```sql
 -- 1. TABEL INDUK: petugas
 CREATE TABLE petugas (
     nrp          VARCHAR(20)  NOT NULL,
@@ -43,13 +46,14 @@ CREATE TABLE pelanggaran (
         FOREIGN KEY (nomor_polisi) REFERENCES kendaraan(nomor_polisi)
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
+```
 
+---
 
--- ================================================================
--- SOAL 2: OPERASI CRUD DASAR (DML)
--- ================================================================
+## Soal 2: Data Manipulation Language (DML)
 
--- 1. [CREATE] Insert data ke seluruh tabel
+```sql
+-- 1. [CREATE] Insert Data Sampel
 INSERT INTO petugas (nrp, nama_petugas, pangkat) VALUES
     ('81020145', 'Budi Santoso',   'Aipda'),
     ('83050231', 'Rina Wulandari', 'Bripka'),
@@ -65,16 +69,10 @@ INSERT INTO pelanggaran (no_tilang, no_referensi, tanggal, nrp_petugas, nomor_po
     ('PLS-2026-002', 'REF-A002', '2026-10-03', '83050231', 'AE 5678 CD'),
     ('PLS-2026-003', 'REF-A003', '2026-10-05', '85070312', 'N 9012 EF');
 
--- 2. [READ] Tampilkan seluruh isi tabel kendaraan
-SELECT 
-    nomor_polisi,
-    jenis_kendaraan,
-    merk,
-    nama_pemilik,
-    alamat_pemilik
-FROM kendaraan;
+-- 2. [READ] Tampilkan Seluruh Isi Tabel Kendaraan
+SELECT * FROM kendaraan;
 
--- 3. [UPDATE] Ubah tanggal transaksi tilang 'PLS-2026-001'
+-- 3. [UPDATE] Ubah Tanggal Transaksi Tilang
 UPDATE pelanggaran
 SET tanggal = '2026-10-02'
 WHERE no_tilang = 'PLS-2026-001';
@@ -82,19 +80,20 @@ WHERE no_tilang = 'PLS-2026-001';
 -- Cek hasil update
 SELECT * FROM pelanggaran WHERE no_tilang = 'PLS-2026-001';
 
--- 4. [DELETE] Hapus baris transaksi tilang 'PLS-2026-003'
+-- 4. [DELETE] Hapus Satu Transaksi Tilang
 DELETE FROM pelanggaran
 WHERE no_tilang = 'PLS-2026-003';
 
 -- Cek hasil delete
 SELECT * FROM pelanggaran;
+```
 
+---
 
--- ================================================================
--- SOAL 3: QUERY KOMPLEKS & AGREGASI LAPORAN
--- ================================================================
+## Soal 3: Query Kompleks & Agregasi
 
--- Laporan rekapitulasi jumlah pelanggaran yang ditangani tiap petugas (Oktober 2026)
+```sql
+-- Rekapitulasi Jumlah Pelanggaran per Petugas (Periode Oktober 2026)
 SELECT 
     p.nrp,
     p.nama_petugas,
@@ -110,3 +109,14 @@ GROUP BY
     p.pangkat
 ORDER BY 
     total_pelanggaran DESC;
+```
+
+---
+
+## Bukti Eksekusi Query
+
+| Nomor Soal | Deskripsi Tugas | Bukti Eksekusi (Screenshot) |
+| :--- | :--- | :--- |
+| **Soal 1** | Data Definition & Relasi (DDL) | [![Bukti Soal 1](./assets/soal1.png)](./assets/soal1.png) |
+| **Soal 2** | Operasi CRUD Dasar (DML) | [![Bukti Soal 2](./assets/soal2.png)](./assets/soal2.png) |
+| **Soal 3** | Query Kompleks & Agregasi | [![Bukti Soal 3](./assets/soal3.png)](./assets/soal3.png) |
