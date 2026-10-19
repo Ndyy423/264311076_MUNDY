@@ -119,7 +119,8 @@ ORDER BY
 ![Bukti Eksekusi Soal 1](./assets/bukti_soal_1.png)
 
 ### Soal 2
-![Bukti Eksekusi Soal 2](./assets/soal2.png)
+![Bukti Eksekusi Soal 2](./assets/bukti_soal_2.png)
 
 ### Soal 3
-![Bukti Eksekusi Soal 3](./assets/soal3.png)
+![Bukti Eksekusi Soal 3](assets/bukti_soal_3_1.png)
+![Bukti Eksekusi Soal 3](assets/bukti_soal_3_2.png)
