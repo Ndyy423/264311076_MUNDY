@@ -8,11 +8,15 @@
 | **Mata Kuliah** | Praktikum Sistem Basis Data |
 
 ---
+<div align="center">
+
 <picture data-importer="pacman">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ndyy423/Ndyy423/pacman-output/pacman-contribution-graph-dark.svg?game=pacman">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ndyy423/Ndyy423/pacman-output/pacman-contribution-graph.svg?game=pacman">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Ndyy423/Ndyy423/pacman-output/pacman-contribution-graph.svg?game=pacman">
 </picture>
+
+</div>
 
 ###
 ---
