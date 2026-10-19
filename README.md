@@ -116,7 +116,7 @@ ORDER BY
 ## Bukti Eksekusi Query
 
 ### Soal 1
-![Bukti Eksekusi Soal 1](./assets/soal1.png)
+![Bukti Eksekusi Soal 1](./assets/bukti_soal_1.png)
 
 ### Soal 2
 ![Bukti Eksekusi Soal 2](./assets/soal2.png)
