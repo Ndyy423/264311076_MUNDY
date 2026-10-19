@@ -124,13 +124,13 @@ ORDER BY
 
 ## Bukti Eksekusi Query
 
-### Soal 1
+### Soal 1: Data Definition Language (DDL)
 ![Bukti Eksekusi Soal 1](./assets/bukti_soal_1.png)
 ![Bukti Eksekusi Soal 1](./assets/bukti_soal_1_2.png)
 
-### Soal 2
+### Soal 2: Data Manipulation Language (DML)
 ![Bukti Eksekusi Soal 2](./assets/bukti_soal_2.png)
 
-### Soal 3
+### Soal 3: Query Kompleks & Agregasi
 ![Bukti Eksekusi Soal 3](assets/bukti_soal_3_1.png)
 ![Bukti Eksekusi Soal 3](assets/bukti_soal_3_2.png)
