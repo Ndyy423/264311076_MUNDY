@@ -86,7 +86,7 @@ CREATE TABLE sanggahan (
 
 **A. Screenshot Eksekusi Pembuatan Tabel Sanggahan (DDL)**
 ![Deskripsi Gambar](./assets/tabel_tambahan/Screenshot_20261025_220858.png)
-![Deskripsi Gambar1]("./assets/tabel_tambahan/bruhh.png")
+![Deskripsi Gambar1](./assets/tabel_tambahan/bruhh.png)
 
 **B. Screenshot Relasi Primary Key dan Foreign Key (Properties / ERD Tab)**
 ![Deskripsi Gambar](./assets/tabel_tambahan/Screenshot_20261025_220858.png)
