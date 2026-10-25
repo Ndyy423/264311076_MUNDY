@@ -1,12 +1,14 @@
 # Dokumentasi Penambahan Proses Bisnis: Modul Sanggahan E-TLE
 
 **Identitas Mahasiswa**
-* **Nama:** Muhammad Andy Dwi Subandi
-* **NIM:** 264311076
-* **Kelas:** 1C
-* **Program Studi:** Teknologi Rekayasa Perangkat Lunak
 
----
+* **Nama:** Muhammad Andy Dwi Subandi
+
+* **NIM:** 264311076
+
+* **Kelas:** 1C
+
+* **Program Studi:** Teknologi Rekayasa Perangkat Lunak
 
 ## Latar Belakang
 
@@ -45,7 +47,7 @@ Untuk memastikan arsitektur basis data bebas dari anomali pembaruan (*update ano
 
 Skrip DDL berikut dirancang dengan batasan (*constraints*) yang bertindak sebagai penjaga gerbang utama untuk menjamin integritas referensial dan mencegah munculnya *orphan data* (data yatim piatu) di level *database engine*.
 
-```sql
+```
 CREATE TABLE sanggahan (
     id_sanggahan INT AUTO_INCREMENT PRIMARY KEY,
     
@@ -77,4 +79,16 @@ CREATE TABLE sanggahan (
         ON UPDATE CASCADE
         ON DELETE SET NULL
 );
+
 ```
+
+## 4. Dokumentasi Eksekusi SQL Editor (Screenshot)
+
+**A. Screenshot Eksekusi Pembuatan Tabel Sanggahan (DDL)**
+![Deskripsi Gambar](./)
+
+**B. Screenshot Relasi Primary Key dan Foreign Key (Properties / ERD Tab)**
+`[Tempelkan Screenshot 2 Di Sini]`
+
+**C. Screenshot Data Hasil Kueri (Result Grid - Opsional jika ada DML)**
+`[Tempelkan Screenshot 3 Di Sini]`
