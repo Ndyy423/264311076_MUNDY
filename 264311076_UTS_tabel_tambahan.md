@@ -85,10 +85,10 @@ CREATE TABLE sanggahan (
 ## 4. Dokumentasi Eksekusi SQL Editor (Screenshot)
 
 **A. Screenshot Eksekusi Pembuatan Tabel Sanggahan (DDL)**
-![Deskripsi Gambar](./)
+![Deskripsi Gambar](./assets/tabel_tambahan/Screenshot_20261025_220858.png)
 
 **B. Screenshot Relasi Primary Key dan Foreign Key (Properties / ERD Tab)**
-`[Tempelkan Screenshot 2 Di Sini]`
+![Deskripsi Gambar](./assets/tabel_tambahan/Screenshot_20261025_220858.png)
 
 **C. Screenshot Data Hasil Kueri (Result Grid - Opsional jika ada DML)**
-`[Tempelkan Screenshot 3 Di Sini]`
+![Deskripsi Gambar](./assets/tabel_tambahan/Screenshot_20261025_220858.png)
