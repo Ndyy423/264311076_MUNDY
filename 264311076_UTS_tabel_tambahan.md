@@ -89,6 +89,3 @@ CREATE TABLE sanggahan (
 
 **B. Screenshot Relasi Primary Key dan Foreign Key (Properties / ERD Tab)**
 ![Deskripsi Gambar](./assets/tabel_tambahan/Screenshot_20261025_224232.png)
-
-**C. Screenshot Data Hasil Kueri (Result Grid - Opsional jika ada DML)**
-![Deskripsi Gambar](./assets/tabel_tambahan/Screenshot_20261025_220858.png)
